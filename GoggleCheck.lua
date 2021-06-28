@@ -12,19 +12,24 @@ local function gogglesAreEquipped()
     return IsEquippedItem('Ultra-Spectropic Detection Goggles');
 end
 
+local function goggleAlert(message)
+	print(message);
+end
+
 frame:SetScript('OnEvent', function(_, event)
 
     local currentArea = GetRealZoneText();
     if isGoggleArea(currentArea) then
 
         if not gogglesAreEquipped() then
-            print('Equip Goggles!');
+            goggleAlert('Engineering Goggles are not equipped!');
         end
 
     elseif isNonGoggleArea(currentArea) then
 
         if gogglesAreEquipped() then
-            print('Unequip Goggles!');
+        
+            goggleAlert('Engineering Goggles are still equipped!');
         end
 
     end
