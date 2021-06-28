@@ -1,0 +1,6 @@
+## Interface: 20501
+## Title: GoggleCheck
+## Author: Christian Griffin
+## Version: 0.1
+
+GoggleCheck.lua
