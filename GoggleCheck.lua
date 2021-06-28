@@ -28,7 +28,6 @@ frame:SetScript('OnEvent', function(_, event)
     elseif isNonGoggleArea(currentArea) then
 
         if gogglesAreEquipped() then
-        
             goggleAlert('Engineering Goggles are still equipped!');
         end
 
