@@ -1,5 +1,15 @@
 local frame = CreateFrame("Frame");
 
+local function tableHasValue(theTable, search)
+    for index, value in ipairs(theTable) do
+        if value == search then
+            return true
+        end
+    end
+
+    return false
+end
+
 local function isGoggleArea(areaName)
     return tableHasValue({'Nagrand', 'Shadowmoon Valley', 'Netherstorm', 'Zangarmarsh'}, areaName);
 end
